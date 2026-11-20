@@ -1,1 +1,1 @@
-{"name":"오늘 뭐 읽었어?","short_name":"뭐 읽었어?","start_url":"./","display":"standalone","background_color":"#f8eef2","theme_color":"#f5edf1","lang":"ko","icons":[]}
+{"name":"오늘 뭐 읽었어?","short_name":"뭐 읽었어?","start_url":"./","display":"standalone","background_color":"#f1f2f3","theme_color":"#f1f2f3","lang":"ko","icons":[{"src":"book-icon.png","sizes":"367x303","type":"image/png","purpose":"any"}]}
