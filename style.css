@@ -278,3 +278,44 @@ textarea,
   .calendar-panel .day{min-height:88px;padding:4px 2px}
   .calendar-panel .covers{border-radius:6px}
 }
+
+
+/* v20: prevent mobile calendar cells from overflowing or visually overlapping */
+.calendar-panel>.weekdays,
+.calendar-panel>.days{
+  display:grid!important;
+  grid-template-columns:repeat(7,minmax(0,1fr))!important;
+  width:100%!important;
+  min-width:0!important;
+}
+.calendar-panel>.weekdays>* ,
+.calendar-panel>.days>.day{
+  min-width:0!important;
+  max-width:100%!important;
+}
+.calendar-panel>.days>.day{
+  width:100%!important;
+  aspect-ratio:auto!important;
+  min-height:clamp(72px,13vw,112px)!important;
+  overflow:hidden!important;
+}
+.calendar-panel>.days>.day .covers{
+  min-width:0!important;
+  max-width:100%!important;
+}
+@media(max-width:600px){
+  .calendar-panel{padding:20px 12px 22px!important}
+  .calendar-panel>.weekdays,.calendar-panel>.days{
+    grid-template-columns:repeat(7,minmax(0,1fr))!important;
+    column-gap:3px!important;
+  }
+  .calendar-panel>.days{row-gap:5px!important}
+  .calendar-panel>.days>.day{
+    min-height:clamp(76px,20vw,104px)!important;
+    height:auto!important;
+    padding:0!important;
+    border-radius:7px!important;
+  }
+  .calendar-panel>.days>.day .day-num{top:4px;left:4px;font-size:10px}
+  .calendar-panel>.days>.day .covers{border-radius:6px}
+}
